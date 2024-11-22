@@ -1,4 +1,5 @@
 import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -23,14 +24,19 @@ const Hero = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          {["Health", "Education", "Business", "Tourism"].map((service) => (
-            <a
-              key={service}
-              href={`#${service.toLowerCase()}`}
+          {[
+            { name: "Health", path: "/health" },
+            { name: "Education", path: "/education" },
+            { name: "Business", path: "/business" },
+            { name: "Tourism", path: "/tourism" }
+          ].map((service) => (
+            <Link
+              key={service.name}
+              to={service.path}
               className="bg-white/10 hover:bg-white/20 rounded-lg p-4 transition-colors"
             >
-              {service}
-            </a>
+              {service.name}
+            </Link>
           ))}
         </div>
       </div>
