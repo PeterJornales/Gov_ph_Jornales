@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div className="bg-gradient-to-r from-primary to-primary-dark text-white py-20">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in font-serif">
           Welcome to the Philippine Government Portal
         </h1>
-        <p className="text-xl mb-8 animate-fade-in opacity-90">
+        <p className="text-xl mb-8 animate-fade-in opacity-90 font-light tracking-wide">
           Your gateway to government services and information
         </p>
         
@@ -33,7 +33,7 @@ const Hero = () => {
             <Link
               key={service.name}
               to={service.path}
-              className="bg-white/10 hover:bg-white/20 rounded-lg p-4 transition-colors"
+              className="bg-white/10 hover:bg-white/20 rounded-lg p-4 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg font-medium tracking-wide"
             >
               {service.name}
             </Link>

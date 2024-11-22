@@ -23,7 +23,7 @@ const News = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-primary mb-12 text-center">
+        <h2 className="text-3xl font-bold text-primary mb-12 text-center font-serif">
           Latest News and Updates
         </h2>
 
@@ -31,20 +31,20 @@ const News = () => {
           {news.map((item) => (
             <div
               key={item.title}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
-              <span className="text-accent text-sm font-medium">{item.category}</span>
-              <h3 className="font-semibold text-lg mt-2 mb-4 text-primary">{item.title}</h3>
-              <div className="flex items-center text-gray-500 text-sm mb-6">
+              <span className="text-accent text-sm font-medium tracking-wide">{item.category}</span>
+              <h3 className="font-semibold text-lg mt-2 mb-4 text-primary font-sans tracking-wide">{item.title}</h3>
+              <div className="flex items-center text-gray-500 text-sm mb-6 font-light">
                 <Calendar className="h-4 w-4 mr-2" />
                 {item.date}
               </div>
               <Button
                 variant="outline"
-                className="w-full group hover:bg-primary hover:text-white transition-colors duration-300"
+                className="w-full group hover:bg-gradient-to-r from-ph-blue to-primary-dark hover:text-white transition-all duration-300 font-medium tracking-wider"
               >
                 Read more
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </div>
           ))}
