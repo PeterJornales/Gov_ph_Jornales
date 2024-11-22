@@ -62,3 +62,79 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom Utilities */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glass Effect */
+.glass-effect {
+  @apply bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg;
+}
+
+/* Professional Typography */
+.heading-serif {
+  @apply font-serif tracking-tight;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Interactive Elements */
+.interactive-card {
+  @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+}
+
+/* Professional Gradients */
+.gradient-primary {
+  @apply bg-gradient-to-r from-primary via-primary-light to-primary;
+}
+
+.gradient-accent {
+  @apply bg-gradient-to-r from-accent via-accent-light to-accent;
+}
+
+/* Responsive Design Helpers */
+.responsive-container {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full hover:bg-primary/70 transition-colors;
+}
+
+/* Focus States */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white;
+}
