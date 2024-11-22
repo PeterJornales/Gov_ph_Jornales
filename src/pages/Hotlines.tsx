@@ -1,6 +1,6 @@
 import PageTemplate from "@/components/PageTemplate";
 import { Card } from "@/components/ui/card";
-import { Phone, Ambulance, Police, FireExtinguisher } from "lucide-react";
+import { Phone, Ambulance, Shield, Flame } from "lucide-react";
 
 const Hotlines = () => {
   return (
@@ -22,7 +22,7 @@ const Hotlines = () => {
 
         <Card className="p-6">
           <div className="flex items-center space-x-4 mb-4">
-            <Police className="h-8 w-8 text-blue-600" />
+            <Shield className="h-8 w-8 text-blue-600" />
             <div>
               <h3 className="text-xl font-medium">Police Hotline</h3>
               <p className="text-2xl font-bold text-primary">117</p>
@@ -44,7 +44,7 @@ const Hotlines = () => {
 
         <Card className="p-6">
           <div className="flex items-center space-x-4 mb-4">
-            <FireExtinguisher className="h-8 w-8 text-red-600" />
+            <Flame className="h-8 w-8 text-red-600" />
             <div>
               <h3 className="text-xl font-medium">Fire Emergency</h3>
               <p className="text-2xl font-bold text-primary">117</p>

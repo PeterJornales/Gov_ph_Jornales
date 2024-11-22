@@ -1,6 +1,6 @@
 import PageTemplate from "@/components/PageTemplate";
 import { Card } from "@/components/ui/card";
-import { Virus, Syringe, Activity, Users } from "lucide-react";
+import { Activity, Syringe, Users, BadgeAlert } from "lucide-react";
 
 const CovidUpdates = () => {
   return (
@@ -12,7 +12,7 @@ const CovidUpdates = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="p-6">
             <div className="flex items-center space-x-4 mb-4">
-              <Virus className="h-8 w-8 text-red-600" />
+              <BadgeAlert className="h-8 w-8 text-red-600" />
               <div>
                 <h3 className="text-lg font-medium">Active Cases</h3>
                 <p className="text-2xl font-bold text-primary">1,234</p>
