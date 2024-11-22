@@ -1,4 +1,5 @@
-import { Building } from "lucide-react";
+import { Building2, ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 const departments = [
   { name: "Department of Education", abbr: "DepEd" },
@@ -11,9 +12,9 @@ const departments = [
 
 const Directory = () => {
   return (
-    <section id="directory" className="py-16 bg-gray-50">
+    <section id="directory" className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+        <h2 className="text-3xl font-bold text-primary mb-12 text-center">
           Government Directory
         </h2>
         
@@ -21,19 +22,22 @@ const Directory = () => {
           {departments.map((dept) => (
             <div
               key={dept.abbr}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
             >
               <div className="flex items-center mb-4">
-                <Building className="h-6 w-6 text-primary mr-3" />
-                <h3 className="font-semibold text-lg">{dept.abbr}</h3>
+                <Building2 className="h-8 w-8 text-ph-blue" />
+                <div className="ml-4">
+                  <h3 className="font-semibold text-lg text-primary">{dept.abbr}</h3>
+                  <p className="text-gray-600 text-sm">{dept.name}</p>
+                </div>
               </div>
-              <p className="text-gray-600">{dept.name}</p>
-              <a
-                href="#"
-                className="mt-4 inline-block text-accent hover:text-accent-dark transition-colors"
+              <Button
+                variant="outline"
+                className="w-full mt-4 group hover:bg-primary hover:text-white transition-colors duration-300"
               >
-                Visit website →
-              </a>
+                Visit website
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
           ))}
         </div>
